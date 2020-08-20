@@ -25,11 +25,13 @@ end
 def find_the_cheese(array)
   cheese_types = ["cheddar", "gouda", "camembert"]
   array.find do |string|
-    if (cheese_types.include?(string))
-      string
-    else 
-      nil
-    end
+    (cheese_types.include?(string))
     end
 end
 #array = ["banana", "cheddar", "sock"]
+def starts_with_b(words)
+  words.select do |names|
+    names.start_with?("b")
+  end
+end
+puts starts_with_b(["albert", "bob", "beyonce", "carl"])
